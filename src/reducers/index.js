@@ -1,7 +1,13 @@
 import { combineReducers } from 'redux';
+import BooksReducer from './reducer_books';
+import ActiveBook from './reducer_active_book';
+
+// This is application state
+// React components also handle their owm states... those are separate things
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+  books: BooksReducer,
+  activeBook: ActiveBook
 });
 
 export default rootReducer;
